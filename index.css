@@ -14,6 +14,7 @@ table {
     border-collapse: collapse;
 }
 td, th {
+    color: white;
     border: 1px solid #ddd;
     padding: 8px;
 }
