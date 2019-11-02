@@ -1,18 +1,17 @@
 body {
   background-color: #cc6600;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
 }
-h2 {
-    color: white;
-    text-align: center;  
-}
-p {
-    color: white;
-    text-align: center;
-}
+
 table {
     border-collapse: collapse;
 }
+  table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
 td, th {
     color: white;
     border: 1px solid #ddd;
@@ -29,4 +28,9 @@ th {
     text-align: left;
     background-color: #663300;
     color: white;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
 }

@@ -1,54 +1,87 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Coffee in Eastside of Seattle</title>
-    <style>
-        table,
-        th,
-        td {
-            border: 2px solid white;
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Coffee in Eastside of Seattle</title>
+        <style>
+            table,
+            th,
+            td {
+                border: 2px solid white;
+            }
+            tr {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>The Best Coffee Shops For Getting Work Done</h1>
+        <p>The Eastside of Seattle Edition</p>
+        <img src="https://cdn.pixabay.com/photo/2015/12/08/00/26/coffee-shop-1081713_960_720.jpg" class="center" width="700" alt="Coffee shop">
+        <br />
+        <div>
+            <h3>If you like coffee, click <button onclick="doYouLikeCoffeePromt()">HERE</button>!</h3>
+            <p id="favorite-coffee"></p>
+        </div>
+        <table style="width:60%" class="center">
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Open hours</th>
+            </tr>
+            <tr>
+                <td>Zoka Coffee</td>
+                <td>Kirkland</td>
+                <td>7AM to 9PM</td>
+            </tr>
+            <tr>
+                <td>Starbucks</td>
+                <td>Kirkland</td>
+                <td>4AM to 12AM</td>
+            </tr>
+            <tr>
+                <td>Woods Coffee</td>
+                <td>Bellevue</td>
+                <td>5AM to 9PM</td>
+            </tr>
+            <tr>
+                <td>Thruline Coffee</td>
+                <td>Kirkland</td>
+                <td>7AM to 9PM</td>
+            </tr>
+        </table>
+    </body>
+    <div>
+        <h3>If these information is helpful to you, click <button onclick="likeInfoPromt()">HERE</button>.</h3>
+        <p id="like-info-promt"></p>
+    </div>
+    <div>
+        <p>Current time is : <span id="current-time"></span></p>
+    </div>
+    <script>
+        window.alert("Welcome!");
+        function doYouLikeCoffeePromt() {
+            var txt;
+            var drink = prompt("What is your favorite coffee?", "Cold brew");
+            if (drink == null || drink == "") {
+                txt = "User cancelled the prompt.";
+            } else {
+                txt = "Your favorite coffee is " + drink + ".";
+            }
+            document.getElementById("favorite-coffee").innerHTML = txt;
         }
-        tr {
-            text-align: center;
+        function likeInfoPromt() {
+            var txt;
+            if (confirm("Thank you for liking my page :)")) {
+                txt = "Thank you for liking my page :)";
+            } else {
+                txt = "I will make it better... :'(";
+            }
+            document.getElementById("like-info-promt").innerHTML = txt;
         }
-    </style>
-</head>
-
-<body>
-
-    <h2>The Best Coffee Shops For Getting Work Done</h1>
-    <p>The Eastside of Seattle Edition</p>
-    <img src="https://cdn.pixabay.com/photo/2015/12/08/00/26/coffee-shop-1081713_960_720.jpg" width="700" class="center" alt="Coffee shop">
-    <table style="width:100%">
-        <tr>
-            <th>Name</th>
-            <th>City</th>
-            <th>Open hours</th>
-        </tr>
-        <tr>
-            <td>Zoka Coffee</td>
-            <td>Kirkland</td>
-            <td>7AM to 9PM</td>
-        </tr>
-        <tr>
-            <td>Starbucks</td>
-            <td>Kirkland</td>
-            <td>4AM to 12AM</td>
-        </tr>
-        <tr>
-            <td>Woods Coffee</td>
-            <td>Bellevue</td>
-            <td>5AM to 9PM</td>
-        </tr>
-        <tr>
-            <td>Thruline Coffee</td>
-            <td>Kirkland</td>
-            <td>7AM to 9PM</td>
-        </tr>
-    </table>
-
-</body>
-<script src="script.js"></script>
+        let d = new Date();
+        document.getElementById("current-time").innerHTML = d;
+    </script>
 </html>
