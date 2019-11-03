@@ -25,6 +25,20 @@
             <h3>If you like coffee, click <button onclick="doYouLikeCoffeePromt()">HERE</button>!</h3>
             <p id="favorite-coffee"></p>
         </div>
+        <div id="guess-my-drink">
+            <form>
+                <h3>Then, guess my favorite coffee.</h3>
+                <input type="radio" name="coffee" value="iced-latte"> Iced Latte<br>
+                <input type="radio" name="coffee" value="americano"> Americano<br>
+                <input type="radio" name="coffee" value="cold-brew"> Cold Brew<br>
+                <input type="radio" name="coffee" value="macchiato"> Macchiato<br>
+                <input type="radio" name="coffee" value="mocha"> Mocha<br>
+                <input type="radio" name="coffee" value="flat-white"> Flat White<br>
+                <input type="button" onclick="guessMyDrink()" value="Guess">
+                <p id="my-drink"></p>
+            </form>
+        </div>
+        <br />
         <table style="width:60%" class="center">
             <tr>
                 <th>Name</th>
@@ -61,28 +75,4 @@
         <p>Current time is : <span id="current-time"></span></p>
     </div>
     <script src="./script.js"></script>
-    <!-- <script>
-        window.alert("Welcome!");
-        function doYouLikeCoffeePromt() {
-            var txt;
-            var drink = prompt("What is your favorite coffee?", "Cold brew");
-            if (drink == null || drink == "") {
-                txt = "User cancelled the prompt.";
-            } else {
-                txt = "Your favorite coffee is " + drink + ".";
-            }
-            document.getElementById("favorite-coffee").innerHTML = txt;
-        }
-        function likeInfoPromt() {
-            var txt;
-            if (confirm("Thank you for liking my page :)")) {
-                txt = "Thank you for liking my page :)";
-            } else {
-                txt = "I will make it better... :'(";
-            }
-            document.getElementById("like-info-promt").innerHTML = txt;
-        }
-        let d = new Date();
-        document.getElementById("current-time").innerHTML = d;
-    </script> -->
 </html>

@@ -34,3 +34,10 @@ img.center {
     display: block;
     margin: 0 auto;
 }
+
+#guess-my-drink {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    border: 6px solid #ddd;
+}
